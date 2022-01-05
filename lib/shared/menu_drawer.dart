@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:globo_fitness/screens/sessions_screen.dart';
+import 'package:globo_fitness/screens/weather_screen.dart';
 import '../screens/bmi_screen.dart';
 import '../screens/intro_screen.dart';
 
@@ -38,6 +40,12 @@ class MenuDrawer extends StatelessWidget {
             switch (element) {
               case 'BMI Calculator':
                 screen = const BmiScreen();
+                break;
+              case 'Weather':
+                screen = const WeatherScreen();
+                break;
+              case 'Training':
+                screen = const SessionsScreen();
                 break;
               case 'Home':
               default:
