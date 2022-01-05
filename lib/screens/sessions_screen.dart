@@ -25,7 +25,9 @@ class _SessionsScreenState extends State<SessionsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Your Training Sessions')),
-      body: ListView(),
+      body: ListView(
+        children: getContent(),
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           showSessionDialog(context);
@@ -38,7 +40,7 @@ class _SessionsScreenState extends State<SessionsScreen> {
   Future<dynamic> showSessionDialog(BuildContext context) async {
     return showDialog(
         context: context,
-        builder: (BuildContext) {
+        builder: (buildContext) {
           return AlertDialog(
             title: const Text('Insert Training Session'),
             content: SingleChildScrollView(
